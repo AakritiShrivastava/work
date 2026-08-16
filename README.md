@@ -6,7 +6,7 @@ Static portfolio site for [Aakriti Shrivastava](https://www.linkedin.com/in/ak-s
 
 ## Local preview
 
-Open `index.html` in a browser, or serve the folder:
+Open `home.html` in a browser, or serve the folder:
 
 ```bash
 python3 -m http.server 8080
@@ -16,7 +16,7 @@ Then visit http://localhost:8080
 
 ## Pages
 
-- `index.html` — Home (intro, testimonials, work preview, contact)
+- `home.html` — Home (intro, testimonials, work preview, contact)
 - `work.html` — Full work samples
 
 Contact is LinkedIn only: https://www.linkedin.com/in/ak-sh/
