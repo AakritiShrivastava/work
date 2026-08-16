@@ -221,7 +221,10 @@ img {
 .site-main {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem;
+  padding: 2rem 1.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .glass {
@@ -234,7 +237,7 @@ img {
 }
 
 .section {
-  margin-bottom: 2.5rem;
+  margin: 0;
   padding: 2rem 2rem 2.25rem;
 }
 
@@ -254,7 +257,8 @@ img {
   grid-template-columns: minmax(160px, 240px) 1fr;
   gap: 2rem;
   align-items: start;
-  padding: 2.25rem;
+  padding: 2rem;
+  margin: 0;
 }
 
 .hero-photo {
@@ -593,6 +597,7 @@ img {
 .contact-panel {
   text-align: center;
   padding: 2.5rem 2rem;
+  margin: 0;
 }
 
 .contact-panel p {
