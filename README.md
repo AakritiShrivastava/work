@@ -2,6 +2,8 @@
 
 Static portfolio site for [Aakriti Shrivastava](https://www.linkedin.com/in/ak-sh/), hosted on GitHub Pages.
 
+**Live site:** https://aakritishrivastava.github.io/work/
+
 ## Local preview
 
 Open `index.html` in a browser, or serve the folder:
