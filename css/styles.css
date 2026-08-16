@@ -222,9 +222,11 @@ img {
   max-width: var(--max);
   margin: 0 auto;
   padding: 2rem 1.5rem 3.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+}
+
+/* Reliable vertical rhythm between stacked cards */
+.site-main > * + * {
+  margin-top: 2.5rem;
 }
 
 .glass {
@@ -237,7 +239,9 @@ img {
 }
 
 .section {
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
   padding: 2rem 2rem 2.25rem;
 }
 
@@ -597,7 +601,6 @@ img {
 .contact-panel {
   text-align: center;
   padding: 2.5rem 2rem;
-  margin: 0;
 }
 
 .contact-panel p {
