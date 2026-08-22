@@ -1,4 +1,14 @@
 (function () {
+  const typographyLink = document.createElement("link");
+  typographyLink.rel = "stylesheet";
+  typographyLink.href = "css/typography-preview.css";
+  document.head.appendChild(typographyLink);
+
+  const legacyFontLink = document.querySelector(
+    'link[href*="fonts.googleapis.com"]'
+  );
+  if (legacyFontLink) legacyFontLink.remove();
+
   const yearEl = document.querySelector("[data-year]");
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
