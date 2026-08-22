@@ -32,20 +32,27 @@
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
+    const autoplayMs = Number(root.getAttribute("data-autoplay")) || 7000;
+    const shouldAutoplay =
+      !reduceMotion && root.getAttribute("data-autoplay") !== "false";
 
-    slides.forEach(function (_, i) {
-      const dot = document.createElement("button");
-      dot.type = "button";
-      dot.className = "carousel-dot";
-      dot.setAttribute("aria-label", "Go to slide " + (i + 1));
-      if (i === 0) dot.setAttribute("aria-current", "true");
-      dot.addEventListener("click", function () {
-        goTo(i);
+    if (dotsWrap) {
+      slides.forEach(function (_, i) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "carousel-dot";
+        dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+        if (i === 0) dot.setAttribute("aria-current", "true");
+        dot.addEventListener("click", function () {
+          goTo(i);
+        });
+        dotsWrap.appendChild(dot);
       });
-      dotsWrap.appendChild(dot);
-    });
+    }
 
-    const dots = Array.from(dotsWrap.querySelectorAll(".carousel-dot"));
+    const dots = dotsWrap
+      ? Array.from(dotsWrap.querySelectorAll(".carousel-dot"))
+      : [];
 
     function goTo(next) {
       index = (next + slides.length) % slides.length;
@@ -88,10 +95,10 @@
       { passive: true }
     );
 
-    if (!reduceMotion) {
+    if (shouldAutoplay && autoplayMs > 0) {
       let timer = setInterval(function () {
         goTo(index + 1);
-      }, 7000);
+      }, autoplayMs);
 
       root.addEventListener("mouseenter", function () {
         clearInterval(timer);
@@ -99,7 +106,7 @@
       root.addEventListener("mouseleave", function () {
         timer = setInterval(function () {
           goTo(index + 1);
-        }, 7000);
+        }, autoplayMs);
       });
     }
   }

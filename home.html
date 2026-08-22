@@ -11,10 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Source+Sans+3:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sen:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=16" />
+    <link rel="stylesheet" href="css/styles.css?v=19" />
   </head>
   <body>
     <header class="site-header">
@@ -293,73 +293,77 @@
       <section class="section glass" aria-labelledby="photos-title">
         <div class="accent-bar" aria-hidden="true"></div>
         <h2 class="section-title" id="photos-title">With collaborators</h2>
-        <ul class="photo-grid">
-          <li>
-            <figure>
-              <img
-                src="assets/images/carousel-1.jpeg"
-                alt="Aakriti with grassroots justice advocates outdoors"
-                width="1000"
-                height="750"
-              />
-              <figcaption class="photo-caption">
-                With grassroots justice advocates
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img
-                src="assets/images/carousel-2.jpeg"
-                alt="Group portrait with network members indoors"
-                width="1000"
-                height="660"
-              />
-              <figcaption class="photo-caption">
-                Gathering with network members
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img
-                src="assets/images/carousel-3.jpeg"
-                alt="Group at the 12th Asia Pro Bono Summit 2023 opening ceremony"
-                width="1000"
-                height="698"
-              />
-              <figcaption class="photo-caption">
-                12th Asia Pro Bono Summit, 2023
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img
-                src="assets/images/carousel-4.jpeg"
-                alt="With colleagues in front of the Namati mural"
-                width="1000"
-                height="750"
-              />
-              <figcaption class="photo-caption">
-                With colleagues at Namati
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img
-                src="assets/images/carousel-5.jpeg"
-                alt="Dinner with collaborators around a shared table"
-                width="1000"
-                height="750"
-              />
-              <figcaption class="photo-caption">
-                Dinner with collaborators
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
+        <div
+          class="carousel photo-carousel"
+          data-carousel
+          data-autoplay="4000"
+          aria-roledescription="carousel"
+          aria-label="Photos with collaborators"
+        >
+          <div class="carousel-track">
+            <div class="carousel-slides" data-slides>
+              <div class="carousel-slide" data-slide>
+                <img
+                  src="assets/images/carousel-1.jpeg"
+                  alt="Aakriti with grassroots justice advocates outdoors"
+                  width="1000"
+                  height="750"
+                />
+              </div>
+              <div class="carousel-slide" data-slide>
+                <img
+                  src="assets/images/carousel-2.jpeg"
+                  alt="Group portrait with network members indoors"
+                  width="1000"
+                  height="660"
+                />
+              </div>
+              <div class="carousel-slide" data-slide>
+                <img
+                  src="assets/images/carousel-3.jpeg"
+                  alt="Group at the 12th Asia Pro Bono Summit 2023 opening ceremony"
+                  width="1000"
+                  height="698"
+                />
+              </div>
+              <div class="carousel-slide" data-slide>
+                <img
+                  src="assets/images/carousel-4.jpeg"
+                  alt="With colleagues in front of the Namati mural"
+                  width="1000"
+                  height="750"
+                />
+              </div>
+              <div class="carousel-slide" data-slide>
+                <img
+                  src="assets/images/carousel-5.jpeg"
+                  alt="Dinner with collaborators around a shared table"
+                  width="1000"
+                  height="750"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button
+              class="carousel-btn"
+              type="button"
+              data-prev
+              aria-label="Previous photo"
+            >
+              ‹
+            </button>
+            <div class="carousel-dots" data-dots></div>
+            <button
+              class="carousel-btn"
+              type="button"
+              data-next
+              aria-label="Next photo"
+            >
+              ›
+            </button>
+          </div>
+        </div>
       </section>
 
       <section
@@ -387,6 +391,6 @@
       <p>© <span data-year></span> Aakriti Shrivastava</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=2"></script>
   </body>
 </html>
